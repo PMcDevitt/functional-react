@@ -3,14 +3,13 @@ import React from 'react'
 
 const withData = url => Component => (
   class extends React.Component {
-
-    constructor(props) {
+    constructor (props) {
       super(props)
 
       this.state = { data: [] }
     }
 
-    componentDidMount() {
+    componentDidMount () {
       const endpoint = typeof url === 'function' ? url(this.props) : url
 
       fetch(endpoint)
@@ -18,7 +17,7 @@ const withData = url => Component => (
         .then(data => this.setState({ data }))
     }
 
-    render() {
+    render () {
       return <Component {...this.props} {...this.state} />
     }
   }

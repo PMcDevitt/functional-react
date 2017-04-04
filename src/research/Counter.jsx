@@ -3,7 +3,7 @@ import Buttons from './Buttons.js'
 import Display from './Display.js'
 
 export default class Counter extends Component {
-  constructor (props){
+  constructor (props) {
     super(props)
     this.state = {
       counter: 0
@@ -12,20 +12,20 @@ export default class Counter extends Component {
     this.handleIncrement = this.handleIncrement.bind(this)
   }
 
-  handleDecrement(){
+  handleDecrement () {
     this.setState({
       counter: this.state.counter - 1
     })
   }
 
-  handleIncrement(){
+  handleIncrement () {
     this.setState({
       counter: this.state.counter + 1
     })
   }
 
-  render(){
-    return(
+  render () {
+    return (
       <div>
         <Display counter={this.state.counter} />
         <Buttons

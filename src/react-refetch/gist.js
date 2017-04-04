@@ -10,18 +10,15 @@ const Gist = ({ description, star }) => (
 
 Gist.propTypes = {
   description: React.PropTypes.string,
-  star: React.PropTypes.func,
+  star: React.PropTypes.func
 }
-
 const token = 'access_token=123'
-
 const connectWithStar = connect(({ id }) => ({
   star: () => ({
     starResponse: {
       url: `https://api.github.com/gists/${id}/star?${token}`,
-      method: 'PUT',
-    },
-  }),
+      method: 'PUT'
+    }
+  })
 }))
-
 export default connectWithStar(Gist)

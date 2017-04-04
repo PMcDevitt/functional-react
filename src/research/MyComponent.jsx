@@ -1,19 +1,19 @@
 import React from 'react'
 
 const withClassName = Component => props => (
-  <Component {...props} className='my-class'/>
+  <Component {...props} className='my-class' />
 )
 
-const MyComponent =({ className })=>(
-  <div className={className}></div>
+const MyComponent = ({ className }) => (
+  <div className={className} >
+    This has the class name {className}
+  </div>
 )
-MyComponent.propTypes    = {
+
+MyComponent.propTypes = {
   className: React.PropTypes.string
 }
 
 const MyComponentWithClassName = withClassName(MyComponent)
 
-console.log(MyComponentWithClassName)
-
-
-
+export default MyComponentWithClassName
