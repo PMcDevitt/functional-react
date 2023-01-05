@@ -11,7 +11,7 @@
   "devDependencies": {
     "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.5.0",
-    "react-scripts": "0.9.5",
+    "react-scripts": "5.0.1",
     "standard": "^9.0.2"
   },
   "scripts": {
